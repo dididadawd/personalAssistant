@@ -1,0 +1,189 @@
+{
+  "system_prompt": "You are a personal show manager and assistant. Your mission is to track existing shows, identify opportunities, summarize communications, manage projects and tasks, and track recurring financial payments.",
+  "data_schema": {
+    "shows": {
+      "show_id": "string",
+      "show_name": "string",
+      "show_date": "YYYY-MM-DD",
+      "client_name": "string",
+      "status": "string (e.g., Planned, Confirmed, Completed, Cancelled)",
+      "location": "string",
+      "notes": "string",
+      "start_time": "string (auto-added)",
+      "gig_duration": "string (auto-added)"
+    },
+    "clients": {
+      "client_id": "string",
+      "client_name": "string",
+      "contact_email": "string",
+      "last_contact_date": "YYYY-MM-DD",
+      "notes": "string"
+    },
+    "communications": {
+      "communication_id": "string",
+      "client_name": "string",
+      "date": "YYYY-MM-DD",
+      "communication_type": "string (e.g., Email, Call, Meeting)",
+      "summary": "string"
+    },
+    "schedule": {
+      "job_id": "string",
+      "prompt": "string",
+      "time_hh_mm": "hh:mm",
+      "is_active": "bool",
+      "days": "list",
+      "weeks_interval": "int",
+      "send_notification": "bool",
+      "last_run_date": "date"
+    },
+    "tasks": {
+      "task_id": "string",
+      "title": "string",
+      "description": "string",
+      "due_date": "YYYY-MM-DD",
+      "category": "string",
+      "priority": "string (LOW, MEDIUM, HIGH)",
+      "icon": "string",
+      "progress": "int",
+      "status": "string (e.g., Planned, Confirmed, Completed, Cancelled)"
+    },
+    "projects": {
+      "project_id": "string",
+      "title": "string",
+      "description": "string",
+      "icon": "string",
+      "steps": "list",
+      "current_step_index": "integer",
+      "status": "string"
+    },
+    "goals": {
+      "goal_id": "string",
+      "title": "string",
+      "description": "string",
+      "target_date": "YYYY-MM-DD",
+      "metrics": "object",
+      "suggested_actions": "list",
+      "status": "string (e.g., active, completed, archived)",
+      "last_progress_update": "YYYY-MM-DD"
+    },
+    "recipients": {
+      "recipient_id": "string",
+      "type": "string (contact or group)",
+      "name": "string",
+      "role": "string (person's role or group's purpose)",
+      "phone_number": "string (international format, null for groups)",
+      "group_id": "string (null for contacts)",
+      "members": "array of strings (roles)"
+    },
+    "one_time_tasks": {
+      "task_id": "string (auto-generated)",
+      "prompt": "string",
+      "execution_datetime": "ISO 8601 datetime string",
+      "status": "string (pending/completed/failed)",
+      "created_at": "ISO 8601 datetime string",
+      "send_notification": "bool"
+    },
+    "routines": {
+      "routine_id": "string",
+      "title": "string",
+      "description": "string",
+      "frequency": "string (daily, weekly)",
+      "days_of_week": "string (e.g.,daily, Sunday, Monday)",
+      "icon": "string (e.g., fas fa-sync-alt)",
+      "total_completions": "int",
+      "current_streak": "int",
+      "longest_streak": "int",
+      "last_completed_date": "ISO 8601 datetime string"
+    },
+    "missions": {
+      "mission_id": "string (auto-generated)",
+      "title": "string",
+      "goal_description": "string",
+      "status": "string (e.g., active, completed, paused)",
+      "log": "array of objects",
+      "created_at": "datetime",
+      "active_reminder_task_id": "string (nullable)",
+      "task_information_center": "object"
+    },
+    "payments": {
+      "payment_id": "string",
+      "name": "string",
+      "amount": "float",
+      "currency": "string",
+      "payment_day": "int"
+    },
+    "IDEA": {
+      "type": "string",
+      "created_at": "string",
+      "content": "string"
+    },
+    "system_state": {
+      "we dont use this": "so it I did not right something valueble"
+    },
+    "flow_blueprints": {
+      "flow_id": "string",
+      "name": "string",
+      "description": "string",
+      "trigger_type": "string (webhook, schedule, internal)",
+      "steps": "list of step objects"
+    },
+    "flow_runs": {
+      "run_id": "string",
+      "flow_id": "string",
+      "status": "string (running, paused_for_user, completed, failed)",
+      "current_step_index": "int",
+      "payload": "object (the dynamic data traveling through the flow)",
+      "history": "list of execution logs"
+    },
+    "USER_PROFILE": {
+      "type": "string",
+      "preferences": "list",
+      "anti_preferences": "list",
+      "general_info": "list",
+      "unplanned_wins": "list",
+      "current_mood": "string",
+      "stress_notes": "string"
+    },
+    "clinic_sheet": {
+      "clinic_sheet_id": "string",
+      "Date": "string",
+      "Region": "string",
+      "Request_Type": "string",
+      "Urgency": "string",
+      "Status": "string",
+      "Gender": "string"
+    },
+    "medical_records": {
+      "medical_record_id": "string",
+      "Date": "string",
+      "Region": "string",
+      "Request_Type": "string",
+      "Urgency": "string",
+      "Status": "string",
+      "Gender": "string"
+    }
+  },
+  "telegram_chat_id": 5079958108,
+  "work_schedule_template": {
+    "Wednesday": {
+      "start_time": "08:00",
+      "end_time": "16:00"
+    },
+    "Thursday": {
+      "start_time": "04:00",
+      "end_time": "20:00"
+    },
+    "Friday": {
+      "start_time": "08:00",
+      "end_time": "12:00"
+    },
+    "Saturday": {
+      "start_time": "08:00",
+      "end_time": "11:00"
+    },
+    "Sunday": {
+      "start_time": "07:00",
+      "end_time": "13:00"
+    }
+  }
+}

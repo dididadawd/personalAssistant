@@ -1,0 +1,5 @@
+[SYSTEM] --- מתחיל תהליך שינוי סכמה והוספת שדות לטבלה 'clinic_clients'... ---
+[SYSTEM]    ✅ סכמת הטבלה 'clinic_clients' עודכנה בהצלחה.
+[SYSTEM] --- מתחיל עדכון אצווה של כל הרשומות בטבלת 'clinic_clients'... ---
+[SYSTEM]    - 58 רשומות עודכנו עם הנתונים: {'Gender': 'string'}
+[SYSTEM] ✅ עדכון אצווה הושלם בהצלחה עבור טבלת 'clinic_clients'.
