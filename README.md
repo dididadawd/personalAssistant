@@ -278,6 +278,40 @@ Before installing, make sure you have:
    - `credentials.json` (downloaded from Google Cloud Console)
    - `token.json` (auto-generated after first OAuth authorization)
 
+6. create the missing folders:
+├───.vscode
+├───app
+│   ├───api
+│   │   
+│   ├───core
+│   │   
+│   ├───db
+│   │   ├───uploads
+│   │   
+│   ├───prompts
+│   │   
+│   ├───scheduler
+│   │   
+│   ├───services
+│   │   
+│   ├───uploads
+│   ├───utils
+│   │   ├───uploads
+│   │   
+│   
+├───client
+├───knowledge_base
+├───outputs
+├───personas
+│   └───show_manager
+│       ├───knowledge_base
+│       └───memory
+│           
+├───templates
+├───uploads
+│   
+
+
 6. Start Yahli:
 
    ```bash
